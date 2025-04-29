@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles to make the content smaller */
+        .container {
+            max-width: 600px; /* Limit the width of the container */
+            margin: 0 auto; /* Center the container */
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        h1 {
+            font-size: 1.8rem; /* Adjust the font size of the heading */
+        }
+
+        .form-group label {
+            font-size: 0.9rem; /* Make labels smaller */
+        }
+
+        .form-control {
+            font-size: 0.9rem; /* Adjust input font size */
+        }
+
+        button {
+            font-size: 0.9rem; /* Adjust button font size */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <a class="navbar-brand custom-nav-brand" href="#">StrideLux</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="product.html">Shopping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="addtocart.html">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center custom-h1">Payment Details</h1>
+        <form id="paymentForm" class="mt-4">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea id="productDescription" class="form-control" rows="3" readonly></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productSize">Size</label>
+                <input type="text" id="productSize" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="customerAddress">Address</label>
+                <textarea id="customerAddress" class="form-control" rows="3" placeholder="Enter your address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" class="form-control" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash-on-delivery">Cash on Delivery</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit Payment</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 StrideLux. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve the selected product from localStorage
+        const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+        if (selectedProduct) {
+            // Populate the form fields with product details
+            document.getElementById('productName').value = selectedProduct.name;
+            document.getElementById('productDescription').value = selectedProduct.description;
+            document.getElementById('productSize').value = selectedProduct.size;
+        }
+
+        // Handle form submission
+        document.getElementById('paymentForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            alert('Payment submitted successfully!');
+            localStorage.removeItem('selectedProduct'); // Clear the selected product
+            window.location.href = 'index.html'; // Redirect to home page
+        });
+    </script>
+</body>
+
+</html>
