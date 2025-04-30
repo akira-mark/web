@@ -9,15 +9,19 @@ body {
     font-family: 'BrownieFox';
     src: url('Gampolins demo.otf') format('opentype');
 }
+
 #home {
-    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur amount as needed */
     -webkit-backdrop-filter: blur(10px);
 
 }
+
 .center-img {
     display: block;
     margin: 0 auto;
 }
+
 .custom-h1 {
     font-family: 'BrownieFox', sans-serif;
     font-size: 50px;
@@ -93,8 +97,9 @@ section {
 html {
     scroll-behavior: smooth;
 }
+
 footer {
-    background-color: #f8f9fa !important; 
+    background-color: #f8f9fa !important;
     padding: 20px 0;
     border-top: 1px solid #e9ecef;
 }
@@ -130,6 +135,7 @@ footer .list-unstyled li {
 footer .text-center {
     margin-top: 20px;
 }
+
 main {
     padding: 20px;
 }
@@ -216,6 +222,7 @@ main {
     background-color: lightgray !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .custom-nav-link.active {
     background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff !important;
@@ -305,16 +312,23 @@ main {
     background-color: #000000;
     border-color: #000000;
 }
+
 .size-chart-link {
-    font-size: 12px; /* Mas maliit na font size */
-    padding: 5px 10px; /* Mas maliit na padding */
-    display: inline-block; /* Upang magmukhang button */
-    text-decoration: none; /* Alisin ang underline */
-    color: #007bff; /* Kulay ng link */
+    font-size: 12px;
+    /* Mas maliit na font size */
+    padding: 5px 10px;
+    /* Mas maliit na padding */
+    display: inline-block;
+    /* Upang magmukhang button */
+    text-decoration: none;
+    /* Alisin ang underline */
+    color: #007bff;
+    /* Kulay ng link */
 }
 
 .size-chart-link:hover {
-    text-decoration: underline; /* Magdagdag ng underline kapag hover */
+    text-decoration: underline;
+    /* Magdagdag ng underline kapag hover */
 }
 
 @media (max-width: 767.98px) {
