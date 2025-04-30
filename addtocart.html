@@ -20,13 +20,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link custom-nav-link active" href="index.html">Home</a>
+                    <a class="nav-link custom-nav-link active" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="product.html">Shopping</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link custom-nav-link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link" href="addtocart.html">
@@ -93,10 +90,10 @@
     <script>
         // Retrieve cart items from localStorage
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
+
         // Get the cart container
         const cartContainer = document.getElementById('cart-container');
-    
+
         // Check if the cart is empty
         if (cart.length === 0) {
             cartContainer.innerHTML = '<p class="text-center">Your cart is empty.</p>';
@@ -104,7 +101,7 @@
             // Create a table to display cart items
             const table = document.createElement('table');
             table.className = 'table table-bordered';
-    
+
             // Add table headers
             table.innerHTML = `
                 <thead>
@@ -119,7 +116,7 @@
                 <tbody>
                 </tbody>
             `;
-    
+
             // Add cart items to the table
             const tbody = table.querySelector('tbody');
             cart.forEach((item, index) => {
@@ -136,27 +133,27 @@
                 `;
                 tbody.appendChild(row);
             });
-    
+
             // Append the table to the cart container
             cartContainer.appendChild(table);
         }
-    
+
         // Function to remove an item from the cart
         function removeFromCart(index) {
             cart.splice(index, 1); // Remove the item from the cart array
             localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
             location.reload(); // Reload the page to update the cart display
         }
-    
+
         // Function to handle "Buy Now" functionality
         function buyNow(index) {
             const product = cart[index]; // Get the selected product
-    
+
             // Save the product to localStorage for the payment page
             localStorage.setItem('selectedProduct', JSON.stringify(product));
-    
+
             // Redirect to the payment page
-            window.location.href = 'buy.html';
+            window.location.href = 'payment.html';
         }
     </script>
 </body>
