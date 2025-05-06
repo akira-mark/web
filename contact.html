@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - StrideLux</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <a class="navbar-brand custom-nav-brand" href="home.html">StrideLux</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link custom-nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="product.html">Shopping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="blog-post1.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="addtocart.html">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="account.html">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <h1 class="text-center mt-5 custom-h1">Contact Us</h1>
+        <p class="lead text-center">We'd love to hear from you! Please fill out the form below or reach out to us using
+            the contact information provided.</p>
+
+        <div class="row mt-5">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h2>Send Us a Message</h2>
+                <form action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5"
+                            placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primaryy">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-md-6">
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> <a href="mailto:support@stridelux.com">support@stridelux.com</a></p>
+                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                <p><strong>Address:</strong> 123 StrideLux Street, Fashion City, USA</p>
+                <h3>Follow Us</h3>
+                <p>
+                    <a href="#" class="text-primary"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-info ml-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-danger ml-3"><i class="fab fa-instagram fa-2x"></i></a>
+                </p>
+            </div>
+        </div>
+        <div <div class="d-flex justify-content-center mt-4  d-md-none">
+            <a href="home.html" class="btn-primaryy">Back To Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/akira.mark.disierto.656083" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@akiramark?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+                        <li><a href="https://www.instagram.com/disierto_18/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Explore More Pages</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                              <li><a href="shipping-info.html">Shipping Information</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>&nbsp;</h5> <!-- Empty heading for alignment -->
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="giftcard.html">Gift Cards</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="newslatter.html">Newsletter Signup</a></li>
+                        <li><a href="returns.html">Returns and Refunds</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 StrideLux. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

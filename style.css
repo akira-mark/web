@@ -1,0 +1,355 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray !important;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'BrownieFox';
+    src: url('Gampolins demo.otf') format('opentype');
+}
+
+#home {
+    backdrop-filter: blur(10px);
+    /* Adjust the blur amount as needed */
+    -webkit-backdrop-filter: blur(10px);
+
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-h1 {
+    font-family: 'BrownieFox', sans-serif;
+    font-size: 50px;
+    color: black;
+}
+
+.custom-card-body {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+
+.custom-img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-logo {
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: fill;
+}
+
+.custom-card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.custom-dropdown-menu {
+    background-color: transparent !important;
+}
+
+.container {
+    background-color: transparent !important;
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+.custom-nav-brand {
+    color: rgb(0, 0, 0) !important;
+}
+
+.custom-nav-link {
+    color: #000000 !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
+}
+
+.custom-nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: lightgray !important;
+}
+
+section {
+    padding-top: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: #f8f9fa !important;
+    padding: 20px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+}
+
+footer p {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+footer .text-center {
+    margin-top: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.btn-primaryy {
+    background-color: black !important;
+    border-color: #000000;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primaryy:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.btn-3d {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 0 #000000, 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-3d:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 #000000, 0 10px 15px rgba(0, 0, 0, 0.874);
+}
+
+.btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #000000, 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-primary,
+.btn-secondary {
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+    transform: scale(1.05);
+}
+
+.custom-navbar {
+    background-color: lightgray !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-nav-link.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff !important;
+}
+
+.service-box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-box i {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.blog-post .btn-primary {
+    background-color: #000000;
+    border-color: #000000;
+    border: 1px solid #000000;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+.btn-primary {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-primary-custom {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-primary-custom:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.size-chart-link {
+    font-size: 12px;
+    /* Mas maliit na font size */
+    padding: 5px 10px;
+    /* Mas maliit na padding */
+    display: inline-block;
+    /* Upang magmukhang button */
+    text-decoration: none;
+    /* Alisin ang underline */
+    color: #007bff;
+    /* Kulay ng link */
+}
+
+.size-chart-link:hover {
+    text-decoration: underline;
+    /* Magdagdag ng underline kapag hover */
+}
+
+@media (max-width: 767.98px) {
+    .custom-navbar {
+        background-color: lightgrey !important;
+        color: black !important;
+    }
+
+    .custom-nav-link {
+        color: black !important;
+    }
+
+    .custom-nav-brand {
+        color: black !important;
+    }
+
+    .custom-text {
+        font-size: 1rem;
+    }
+
+    .custom-card {
+        width: 100%;
+    }
+}

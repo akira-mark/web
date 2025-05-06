@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            font-size: 0.9rem;
+        }
+
+        button {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <a class="navbar-brand custom-nav-brand" href="home.html">StrideLux</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link custom-nav-link active" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="product.html">Shopping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="blog-post1.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="addtocart.html">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link custom-nav-link" href="account.html">
+                        <i class="fas fa-user"></i> Account
+                    </a>
+            </ul>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h1 class="text-center custom-h1">Payment Details</h1>
+        <form id="paymentForm" class="mt-4">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" class="form-control" readonly aria-label="Product Name">
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea id="productDescription" class="form-control" rows="3" readonly aria-label="Product Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productSize">Size</label>
+                <input type="text" id="productSize" class="form-control" readonly aria-label="Product Size">
+            </div>
+            <div class="form-group">
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName" class="form-control" placeholder="Enter your name" required aria-label="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="customerAddress">Address</label>
+                <textarea id="customerAddress" class="form-control" rows="3" placeholder="Enter your address" required aria-label="Your Address"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" class="form-control" required aria-label="Payment Method">
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash-on-delivery">Cash on Delivery</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primaryy btn-block">Submit Payment</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/akira.mark.disierto.656083" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="https://www.tiktok.com/@akiramark?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i> Tiktok</a></li>
+                        <li><a href="https://www.instagram.com/disierto_18/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Explore More Pages</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                              <li><a href="shipping-info.html">Shipping Information</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>&nbsp;</h5> <!-- Empty heading for alignment -->
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="giftcard.html">Gift Cards</a></li>
+                        <li><a href="promotions.html">Promotions</a></li>
+                        <li><a href="newslatter.html">Newsletter Signup</a></li>
+                        <li><a href="returns.html">Returns and Refunds</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2025 StrideLux. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+            if (selectedProduct) {
+                document.getElementById('productName').value = selectedProduct.name;
+                document.getElementById('productDescription').value = selectedProduct.description;
+                document.getElementById('productSize').value = selectedProduct.size;
+            }
+
+            document.getElementById('paymentForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const customerName = document.getElementById('customerName').value.trim();
+                const customerAddress = document.getElementById('customerAddress').value.trim();
+
+                if (!customerName || !customerAddress) {
+                    alert('Please fill out all required fields.');
+                    return;
+                }
+
+                alert('Payment submitted successfully!');
+                localStorage.removeItem('selectedProduct');
+                window.location.href = 'home.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
